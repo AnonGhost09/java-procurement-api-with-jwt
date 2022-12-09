@@ -1,5 +1,6 @@
 package com.enigma.procurement.controllers;
 
+import com.enigma.procurement.constansts.UrlMappings;
 import com.enigma.procurement.models.Admin;
 import com.enigma.procurement.models.Category;
 import com.enigma.procurement.models.requests.AdminRequest;
@@ -14,7 +15,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/admin")
+@RequestMapping(UrlMappings.ADMIN_URL)
 public class AdminController {
 
     @Autowired
@@ -25,7 +26,6 @@ public class AdminController {
 
     @PostMapping
     public ResponseEntity authentication(@RequestBody AdminRequest adminRequest){
-        System.out.println("tess");
         Admin newAdmin = modelMapper.map(adminRequest,Admin.class);
 
         Admin result = adminService.create(newAdmin);

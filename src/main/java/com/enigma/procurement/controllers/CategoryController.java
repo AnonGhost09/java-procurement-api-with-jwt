@@ -1,5 +1,6 @@
 package com.enigma.procurement.controllers;
 
+import com.enigma.procurement.constansts.UrlMappings;
 import com.enigma.procurement.models.Category;
 import com.enigma.procurement.models.requests.CategoryRequest;
 import com.enigma.procurement.models.responses.SuccessResponse;
@@ -14,7 +15,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/categories")
+@RequestMapping(UrlMappings.CATEGORY_URL)
 public class CategoryController {
     @Autowired
     private ModelMapper modelMapper;
@@ -24,7 +25,6 @@ public class CategoryController {
 
     @PostMapping
     public ResponseEntity createCategory(@RequestBody CategoryRequest categoryRequest) throws Exception {
-        System.out.println("tes");
         Category newCategory = modelMapper.map(categoryRequest, Category.class);
 
         Category result = categoryService.create(newCategory);

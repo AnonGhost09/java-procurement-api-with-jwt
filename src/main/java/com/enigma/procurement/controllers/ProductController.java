@@ -1,5 +1,6 @@
 package com.enigma.procurement.controllers;
 
+import com.enigma.procurement.constansts.UrlMappings;
 import com.enigma.procurement.models.Category;
 import com.enigma.procurement.models.Product;
 import com.enigma.procurement.models.requests.CategoryRequest;
@@ -16,7 +17,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/products")
+@RequestMapping(UrlMappings.PRODUCT_URL)
 public class ProductController {
     @Autowired
     private ModelMapper modelMapper;

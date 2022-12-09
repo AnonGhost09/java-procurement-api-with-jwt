@@ -1,5 +1,6 @@
 package com.enigma.procurement.controllers;
 
+import com.enigma.procurement.constansts.UrlMappings;
 import com.enigma.procurement.models.Product;
 import com.enigma.procurement.models.Transaction;
 import com.enigma.procurement.models.requests.ProductRequest;
@@ -15,7 +16,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/transactions")
+@RequestMapping(UrlMappings.TRANSACTION_URL)
 public class TransactionController {
     @Autowired
     private ModelMapper modelMapper;

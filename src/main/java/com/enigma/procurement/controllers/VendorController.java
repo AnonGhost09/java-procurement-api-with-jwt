@@ -1,5 +1,6 @@
 package com.enigma.procurement.controllers;
 
+import com.enigma.procurement.constansts.UrlMappings;
 import com.enigma.procurement.models.Product;
 import com.enigma.procurement.models.Stock;
 import com.enigma.procurement.models.Vendor;
@@ -16,7 +17,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/vendors")
+@RequestMapping(UrlMappings.VENDOR_URL)
 public class VendorController {
 
     @Autowired
