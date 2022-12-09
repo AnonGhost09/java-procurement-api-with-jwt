@@ -24,17 +24,15 @@ public class ReportingController {
 
 
     @GetMapping(params = {"time","csv"})
-    public ResponseEntity getAllReporting(@RequestParam("time") String time,
-                                          @RequestParam(value = "csv", defaultValue = "reporting") String csvName) throws Exception {
+    public ResponseEntity getAllReporting(
+            @RequestParam(value = "time", required = false, defaultValue = "today") String time,
+            @RequestParam(value = "csv", required = false, defaultValue = "reporting") String csvName) throws Exception {
         List<Reporting> result = null;
-        if(time.equals("today")){
-            System.out.println("hadir");
+        if(time.equals("today")){;
             result = reportingService.getAllToday();
         }else if(time.equals("month")){
-            System.out.println("hadir mont");
-            result = reportingService.getAllMonth();
+            result = reportingService.getAll();
         }else{
-            System.out.println("hadir get");
             result = reportingService.getAll();
         }
 
