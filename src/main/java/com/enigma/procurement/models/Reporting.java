@@ -1,6 +1,11 @@
 package com.enigma.procurement.models;
 
+import java.io.File;
+import java.io.IOException;
+import java.io.PrintWriter;
 import java.util.Date;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 public class Reporting {
     private String productId;
@@ -11,6 +16,7 @@ public class Reporting {
     private Double priceProduct;
     private Integer qty;
     private Double amount;
+
 
     public String getProductId() {
         return productId;
@@ -74,5 +80,17 @@ public class Reporting {
 
     public void setAmount(Double amount) {
         this.amount = amount;
+    }
+
+    @Override
+    public String toString() {
+        return  "productId='" + productId + '\'' +
+                ", date=" + date +
+                ", vendorName='" + vendorName + '\'' +
+                ", productName='" + productName + '\'' +
+                ", categoryName='" + categoryName + '\'' +
+                ", priceProduct=" + priceProduct +
+                ", qty=" + qty +
+                ", amount=" + amount + "\n";
     }
 }

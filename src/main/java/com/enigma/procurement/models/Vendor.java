@@ -22,7 +22,7 @@ public class Vendor {
     private String vendorName;
 
     @OneToMany(mappedBy = "vendor", cascade = CascadeType.PERSIST)
-    @JsonManagedReference
+    @JsonIgnore
     private List<Stock> stocks;
 
     public String getVendorId() {

@@ -1,5 +1,6 @@
 package com.enigma.procurement.models;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonManagedReference;
 import org.hibernate.annotations.GenericGenerator;
@@ -20,7 +21,7 @@ public class Category {
     private String categoryName;
 
     @OneToMany(mappedBy = "category",cascade = CascadeType.PERSIST)
-    @JsonManagedReference
+    @JsonIgnore
     private List<Product> products;
 
     public String getCategoryId() {

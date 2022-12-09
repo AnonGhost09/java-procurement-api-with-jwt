@@ -7,4 +7,6 @@ import java.util.List;
 public interface ReportingService {
     List<Reporting> getAllToday();
     List<Reporting> getAllMonth();
+
+    List<Reporting> getAll();
 }

@@ -1,6 +1,8 @@
 package com.enigma.procurement.models;
 
 import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonManagedReference;
 import org.hibernate.annotations.GenericGenerator;
 
@@ -21,11 +23,11 @@ public class Product {
 
     @ManyToOne
     @JoinColumn(name = "category_id")
-    @JsonBackReference
+    @JsonIgnore
     private Category category;
 
     @OneToMany(mappedBy = "product")
-    @JsonManagedReference
+    @JsonIgnore
     private List<Stock> stocks;
 
     public Category getCategory() {

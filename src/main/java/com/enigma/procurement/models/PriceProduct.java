@@ -1,6 +1,6 @@
 package com.enigma.procurement.models;
 
-import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import org.hibernate.annotations.GenericGenerator;
 
 import javax.persistence.*;
@@ -18,7 +18,7 @@ public class PriceProduct {
     private Double price;
 
     @OneToOne(mappedBy = "priceProduct")
-    @JsonBackReference
+    @JsonIgnore
     private Stock stock;
 
     public String getPriceId() {
