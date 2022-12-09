@@ -42,6 +42,6 @@ public class ReportingController {
         toCsv.writeData(result);
 
         return ResponseEntity.status(HttpStatus.CREATED)
-                .body(new DownloadResponse<>( "Success get all reporting",path,result));
+                .body(new DownloadResponse<>( "Success get all reporting, link download ada di paling bawah",path,result));
     }
 }
