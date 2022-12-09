@@ -7,6 +7,7 @@ import com.enigma.procurement.models.Category;
 import com.enigma.procurement.repositories.AdminRepository;
 import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
@@ -18,6 +19,7 @@ public class AdminServiceImpl implements AdminService{
         this.adminRepository = adminRepository;
     }
 
+    @Transactional
     public Admin create(Admin admin){
         try {
             return adminRepository.save(admin);
@@ -26,6 +28,7 @@ public class AdminServiceImpl implements AdminService{
         }
     }
 
+    @Transactional
     public List<Admin> getAll(){
         List result = adminRepository.findAll();
         if (result.isEmpty()) {

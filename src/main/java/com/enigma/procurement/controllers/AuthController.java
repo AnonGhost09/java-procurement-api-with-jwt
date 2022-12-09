@@ -28,13 +28,4 @@ public class AuthController {
         String token = authService.login(adminRequest);
         return ResponseEntity.ok(token);
     }
-//
-//    @GetMapping("/logout")
-//    public ResponseEntity logout(@RequestParam String token){
-//            if(authService.logout(token)){
-//                return ResponseEntity.ok("Logout Successfully");
-//            }else{
-//                return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body("Logout failed, Token is invalid");
-//            }
-//    }
 }

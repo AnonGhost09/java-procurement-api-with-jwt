@@ -6,6 +6,7 @@ import com.enigma.procurement.models.PriceProduct;
 import com.enigma.procurement.repositories.PriceProductRepository;
 import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 @Service
 public class PriceProductServiceImpl implements PriceProductService{
@@ -16,6 +17,7 @@ public class PriceProductServiceImpl implements PriceProductService{
         this.priceProductRepository = priceProductRepository;
     }
 
+    @Transactional
     public PriceProduct create(PriceProduct priceProduct){
         try {
             return priceProductRepository.save(priceProduct);

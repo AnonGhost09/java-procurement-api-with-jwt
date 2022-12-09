@@ -9,6 +9,7 @@ import com.enigma.procurement.repositories.ProductRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 import java.util.Optional;
@@ -18,6 +19,7 @@ public class CategoryServiceImpl implements CategoryService {
     @Autowired
     private CategoryRepository repository;
 
+    @Transactional
     public Category create(Category category){
         try {
             return repository.save(category);
@@ -26,6 +28,7 @@ public class CategoryServiceImpl implements CategoryService {
         }
     }
 
+    @Transactional
     public List<Category> getAll(){
         List result = repository.findAll();
         if (result.isEmpty()) {

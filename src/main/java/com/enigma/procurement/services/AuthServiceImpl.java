@@ -9,12 +9,13 @@ import com.enigma.procurement.repositories.specifications.AuthSpec;
 import com.enigma.procurement.utils.JwtUtil;
 import org.springframework.data.jpa.domain.Specification;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.ArrayList;
 import java.util.List;
 
 @Service
-public class AuthServiceImpl  {
+public class AuthServiceImpl implements AuthService {
 
     private final JwtUtil jwtUtil;
     private AdminRepository adminRepository;
@@ -24,7 +25,7 @@ public class AuthServiceImpl  {
         this.jwtUtil = jwtUtil;
         this.adminRepository = adminRepository;
     }
-
+    @Transactional
     public String login(AdminRequest adminRequest) {
         try{
             Specification specification = new AuthSpec().getAdmin(adminRequest.getEmail());
@@ -45,7 +46,4 @@ public class AuthServiceImpl  {
             throw new UnauthorizedException("Invalid user name or password");
         }
     }
-
-
-
 }

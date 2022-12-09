@@ -67,6 +67,7 @@ public class VendorServiceImpl implements VendorService {
         }
     }
 
+    @Transactional
     @Override
     public Stock update(Stock stock) {
         try {

@@ -6,6 +6,7 @@ import com.enigma.procurement.repositories.TransactionRepository;
 import com.enigma.procurement.repositories.specifications.ReportingSpec;
 import org.springframework.data.jpa.domain.Specification;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -19,10 +20,13 @@ public class ReportingServiceImpl implements ReportingService {
         this.transactionRepository = transactionRepository;
     }
 
+    @Transactional
     @Override
     public List<Reporting> getAllToday() {
-        List<Transaction> transactions = transactionRepository.findAll();
+        Specification specification = new ReportingSpec().getAllDateToday();
+        List<Transaction> transactions = transactionRepository.findAll(specification);
         List<Reporting> reportings = new ArrayList<>();
+
         for (Transaction transaction:
              transactions) {
 
@@ -42,6 +46,7 @@ public class ReportingServiceImpl implements ReportingService {
         return reportings;
     }
 
+    @Transactional
     @Override
     public List<Reporting> getAllMonth() {
         Specification spec = new ReportingSpec().getAllDateMonth();
@@ -65,13 +70,11 @@ public class ReportingServiceImpl implements ReportingService {
         }
     return reportings;
     }
+
+    @Transactional
     public List<Reporting> getAll() {
-        Specification spec = new ReportingSpec().getAllDateMonth();
-        List<Transaction> transactions = transactionRepository.findAll(spec);
+        List<Transaction> transactions = transactionRepository.findAll();
         List<Reporting> reportings = new ArrayList<>();
-
-
-
         for (Transaction transaction:
                 transactions) {
 
@@ -87,6 +90,7 @@ public class ReportingServiceImpl implements ReportingService {
 
             reportings.add(reporting);
         }
+
         return reportings;
     }
 }

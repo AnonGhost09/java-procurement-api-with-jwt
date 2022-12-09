@@ -9,6 +9,7 @@ import com.enigma.procurement.repositories.ProductRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 import java.util.Optional;
@@ -23,6 +24,7 @@ public class ProductServiceImpl implements ProductService{
         this.categoryRepository = categoryRepository;
     }
 
+    @Transactional
     public Product create(Product product){
         try {
             Optional<Category> category = categoryRepository.findById(product.getCategory().getCategoryId());
@@ -36,6 +38,7 @@ public class ProductServiceImpl implements ProductService{
 
     }
 
+    @Transactional
     public List<Product> getAll(){
         List result = repository.findAll();
         if (result.isEmpty()) {

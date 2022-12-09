@@ -6,6 +6,7 @@ import com.enigma.procurement.models.Transaction;
 import com.enigma.procurement.repositories.StockRepository;
 import com.enigma.procurement.repositories.TransactionRepository;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 import java.util.Optional;
@@ -21,6 +22,7 @@ public class TransactionServiceImpl implements TransactionService {
         this.stockRepository = stockRepository;
     }
 
+    @Transactional
     @Override
     public Transaction create(Transaction transaction) {
 
@@ -42,6 +44,7 @@ public class TransactionServiceImpl implements TransactionService {
         }
     }
 
+    @Transactional
     @Override
     public List<Transaction> getAllTransaction() {
         List result = transactionRepository.findAll();
