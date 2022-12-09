@@ -49,8 +49,8 @@ public class ReportingServiceImpl implements ReportingService {
     @Transactional
     @Override
     public List<Reporting> getAllMonth() {
-        Specification spec = new ReportingSpec().getAllDateMonth();
-        List<Transaction> transactions = transactionRepository.findAll(spec);
+//        Specification spec = new ReportingSpec().
+        List<Transaction> transactions = transactionRepository.getAllByMonth();
         List<Reporting> reportings = new ArrayList<>();
 
         for (Transaction transaction:

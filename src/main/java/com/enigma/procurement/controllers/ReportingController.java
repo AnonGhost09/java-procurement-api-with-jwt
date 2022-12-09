@@ -32,7 +32,7 @@ public class ReportingController {
         if(time.equals("today")){;
             result = reportingService.getAllToday();
         }else if(time.equals("month")){
-            result = reportingService.getAll();
+            result = reportingService.getAllMonth();
         }else{
             result = reportingService.getAll();
         }

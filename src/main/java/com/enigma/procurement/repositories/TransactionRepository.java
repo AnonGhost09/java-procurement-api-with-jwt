@@ -11,4 +11,7 @@ import java.util.List;
 public interface TransactionRepository extends JpaRepository<Transaction, String> {
     List<Transaction> findAll(Specification spec);
 
+    @Query("select e from Transaction e where year(e.dateTransaction) = year(current_date) and month(e.dateTransaction) = month(current_date)")
+    List<Transaction> getAllByMonth();
+
 }
