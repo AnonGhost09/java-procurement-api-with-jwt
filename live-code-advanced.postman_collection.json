@@ -1,0 +1,981 @@
+{
+	"info": {
+		"_postman_id": "d09d10e1-a150-4882-866e-4753a2722cbb",
+		"name": "live-code-advanced",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "12700198"
+	},
+	"item": [
+		{
+			"name": "category",
+			"item": [
+				{
+					"name": "Get All Category",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": [
+						{
+							"name": "New Request",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/categories",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"categories"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 09 Dec 2022 16:00:09 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"code\": \"00\",\n    \"status\": \"OK\",\n    \"message\": \"Success get all categories\",\n    \"data\": [\n        {\n            \"categoryId\": \"9d95246f-0631-47e5-bd85-1129f0939d01\",\n            \"categoryName\": \"PAKAIAN PEREMPUAN\"\n        },\n        {\n            \"categoryId\": \"db5450a5-eee9-4933-9182-6206ff99ee87\",\n            \"categoryName\": \"PAKAIAN KEBAYA\"\n        },\n        {\n            \"categoryId\": \"05ad0b2b-3ce9-4bb3-b79a-92638cc699ce\",\n            \"categoryName\": \"PAKAIAN KEBAYA\"\n        },\n        {\n            \"categoryId\": \"2660f534-ff97-49a0-b289-7bddbc4208ad\",\n            \"categoryName\": \"PAKAIAN KEBAYA\"\n        },\n        {\n            \"categoryId\": \"309a509a-e442-48c0-923c-7dc8812e60a0\",\n            \"categoryName\": \"PAKAIAN KEBAYA 2\"\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Post Category",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"description": "Butuh token"
+					},
+					"response": [
+						{
+							"name": "Post Category",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"categoryName\":\"PAKAIAN ANAK - ANAK\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/categories",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"categories"
+									]
+								}
+							},
+							"status": "Unauthorized",
+							"code": 401,
+							"_postman_previewlanguage": "plain",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain;charset=UTF-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "12"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 09 Dec 2022 16:00:50 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "Unauthorized"
+						},
+						{
+							"name": "Post Category",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"categoryName\":\"PAKAIAN ANAK - ANAK\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/categories",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"categories"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 09 Dec 2022 16:01:21 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"code\": \"00\",\n    \"status\": \"OK\",\n    \"message\": \"Success create category\",\n    \"data\": {\n        \"categoryId\": \"aee5f696-6b8b-42eb-8c32-88aa6c2463e9\",\n        \"categoryName\": \"PAKAIAN ANAK - ANAK\"\n    }\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "product",
+			"item": [
+				{
+					"name": "Create Product",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"categoryName\":\"PAKAIAN LAKI-LAKI\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/products",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"products"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Create Product",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"productName\":\"BAJU KEBAYA\",\n    \"categoryId\":{\n        \"categoryId\":\"9d95246f-0631-47e5-bd85-1129f0939d01\"\n    }\n\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/products",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"products"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 09 Dec 2022 10:18:11 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"code\": \"00\",\n    \"status\": \"OK\",\n    \"message\": \"Success create category\",\n    \"data\": {\n        \"productId\": \"e6a0ae97-f78a-485d-9bfd-3606d695fb45\",\n        \"productName\": \"BAJU KEBAYA\",\n        \"productVendors\": null\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Get Product",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": [
+						{
+							"name": "Get Product",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/products",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"products"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 09 Dec 2022 16:02:39 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"code\": \"00\",\n    \"status\": \"OK\",\n    \"message\": \"Success get all categories\",\n    \"data\": [\n        {\n            \"productId\": \"f653c560-f83e-46d9-9f98-77b643977750\",\n            \"productName\": \"SEPATU FUTSAL\"\n        },\n        {\n            \"productId\": \"349ae4f8-7099-41a1-be49-b76523cda7b3\",\n            \"productName\": \"BAJU KEBAYA\"\n        },\n        {\n            \"productId\": \"e6a0ae97-f78a-485d-9bfd-3606d695fb45\",\n            \"productName\": \"BAJU KEBAYA\"\n        }\n    ]\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "vendor",
+			"item": [
+				{
+					"name": "Get All Vendor",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/vendors",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"vendors"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get All Vendor",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/vendors",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"vendors"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 09 Dec 2022 16:03:11 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"code\": \"00\",\n    \"status\": \"OK\",\n    \"message\": \"Success get all vendors\",\n    \"data\": [\n        {\n            \"vendorId\": \"ffc18df3-fea3-4ec9-9b61-776b6dee0659\",\n            \"vendorName\": \"VENDOR A\",\n            \"productVendors\": [\n                {\n                    \"stockId\": \"297a7d04-b728-4000-b447-abbc958a704d\"\n                }\n            ]\n        },\n        {\n            \"vendorId\": \"4dea2540-5c7e-4130-9da2-68e1103e6414\",\n            \"vendorName\": \"VENDOR A\",\n            \"productVendors\": [\n                {\n                    \"stockId\": \"abe4c5c5-498b-4f2f-8866-fea69ae2b049\"\n                }\n            ]\n        },\n        {\n            \"vendorId\": \"77cc0166-d1a6-459b-9376-26eba2df1b71\",\n            \"vendorName\": \"VENDOR A\",\n            \"productVendors\": [\n                {\n                    \"stockId\": \"e88ca76f-09c6-4409-9fbd-8ad1ad3cf1f8\"\n                }\n            ]\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Create Vendor",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "Create Vendor",
+							"host": [
+								"Create Vendor"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Create Vendor",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"product\":{\n        \"productId\":\"349ae4f8-7099-41a1-be49-b76523cda7b3\"\n    },\n    \"vendor\":{\n        \"vendorName\":\"VENDOR B\"\n    },\n    \"priceProduct\":{\n        \"price\":30000\n    }\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/vendors",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"vendors"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 09 Dec 2022 16:04:31 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"code\": \"00\",\n    \"status\": \"OK\",\n    \"message\": \"Success create vendor\",\n    \"data\": {\n        \"stockId\": \"c04584d8-18cd-4e09-9aee-8b6a9745875c\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Update Price Vendor",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/students/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"students",
+								""
+							]
+						},
+						"description": "Path variable id stock"
+					},
+					"response": [
+						{
+							"name": "Update Price Vendor",
+							"originalRequest": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"priceProduct\":{\n        \"price\":10\n    }\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/vendors/297a7d04-b728-4000-b447-abbc958a704d",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"vendors",
+										"297a7d04-b728-4000-b447-abbc958a704d"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 09 Dec 2022 16:05:25 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"code\": \"00\",\n    \"status\": \"OK\",\n    \"message\": \"Success update vendor price\",\n    \"data\": {\n        \"stockId\": \"297a7d04-b728-4000-b447-abbc958a704d\"\n    }\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "transaction",
+			"item": [
+				{
+					"name": "Create Transaction",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"dateTransaction\":\"2022-12-09\",\n    \"qty\":5,\n    \"stock\":{\n        \"stockId\":\"297a7d04-b728-4000-b447-abbc958a704d\"\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/transactions",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"transactions"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Transaction",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/transactions",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"transactions"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get All Transaction",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/transactions",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"transactions"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 09 Dec 2022 16:06:51 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"code\": \"00\",\n    \"status\": \"OK\",\n    \"message\": \"Success create Transaction\",\n    \"data\": [\n        {\n            \"transactionId\": \"d25dba69-7c10-4ce1-ae61-25cd584c313e\",\n            \"dateTransaction\": \"2022-12-09\",\n            \"qty\": 9\n        },\n        {\n            \"transactionId\": \"c378e251-8409-480b-9894-f6d880881c9e\",\n            \"dateTransaction\": \"2022-12-09\",\n            \"qty\": 9\n        },\n        {\n            \"transactionId\": \"f015f050-f8de-42f5-b065-cf00c1c1f847\",\n            \"dateTransaction\": \"2022-12-09\",\n            \"qty\": 9\n        },\n        {\n            \"transactionId\": \"2ee83e5b-1d12-4c0f-a584-c504cf895cae\",\n            \"dateTransaction\": \"2022-12-09\",\n            \"qty\": 9\n        },\n        {\n            \"transactionId\": \"20a73741-e62e-449c-a5ac-a685c1c122f2\",\n            \"dateTransaction\": \"2022-12-09\",\n            \"qty\": 9\n        },\n        {\n            \"transactionId\": \"410a1519-d8d1-4326-8898-7a74d8eabcac\",\n            \"dateTransaction\": \"2022-12-09\",\n            \"qty\": 9\n        },\n        {\n            \"transactionId\": \"c8e6fd04-b3fe-44ce-aac7-3727cae19338\",\n            \"dateTransaction\": \"2022-12-09\",\n            \"qty\": 9\n        },\n        {\n            \"transactionId\": \"40fd19fa-e059-4911-b72d-83e258305f17\",\n            \"dateTransaction\": \"2022-12-09\",\n            \"qty\": 9\n        },\n        {\n            \"transactionId\": \"fa0b33c8-8302-4004-8c40-adce7cd7f8db\",\n            \"dateTransaction\": \"2022-12-09\",\n            \"qty\": 10\n        },\n        {\n            \"transactionId\": \"006cee19-6533-4903-9f7f-acc90524b622\",\n            \"dateTransaction\": \"2022-12-10\",\n            \"qty\": 120\n        },\n        {\n            \"transactionId\": \"11fae5f9-1d9d-40fd-ab6d-f2f7b7d2310c\",\n            \"dateTransaction\": \"2022-12-10\",\n            \"qty\": 30\n        },\n        {\n            \"transactionId\": \"91978549-a8b3-40b7-8fe1-effdf427c986\",\n            \"dateTransaction\": \"2022-12-10\",\n            \"qty\": 30\n        }\n    ]\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "reporting",
+			"item": [
+				{
+					"name": "Get All Report Today",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/reporting?time=today&csv=report",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"reporting"
+							],
+							"query": [
+								{
+									"key": "time",
+									"value": "today"
+								},
+								{
+									"key": "csv",
+									"value": "report"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get All Report Today",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/reporting?time=today&csv=reportx",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"reporting"
+									],
+									"query": [
+										{
+											"key": "time",
+											"value": "today"
+										},
+										{
+											"key": "csv",
+											"value": "reportx"
+										}
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 09 Dec 2022 16:07:26 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"code\": \"00\",\n    \"status\": \"OK\",\n    \"message\": \"Success get all reporting\",\n    \"data\": [\n        {\n            \"productId\": \"f653c560-f83e-46d9-9f98-77b643977750\",\n            \"date\": \"2022-12-09\",\n            \"vendorName\": \"VENDOR A\",\n            \"productName\": \"SEPATU FUTSAL\",\n            \"categoryName\": \"PAKAIAN PEREMPUAN\",\n            \"priceProduct\": 10,\n            \"qty\": 9,\n            \"amount\": 90\n        },\n        {\n            \"productId\": \"f653c560-f83e-46d9-9f98-77b643977750\",\n            \"date\": \"2022-12-09\",\n            \"vendorName\": \"VENDOR A\",\n            \"productName\": \"SEPATU FUTSAL\",\n            \"categoryName\": \"PAKAIAN PEREMPUAN\",\n            \"priceProduct\": 10,\n            \"qty\": 9,\n            \"amount\": 90\n        },\n        {\n            \"productId\": \"f653c560-f83e-46d9-9f98-77b643977750\",\n            \"date\": \"2022-12-09\",\n            \"vendorName\": \"VENDOR A\",\n            \"productName\": \"SEPATU FUTSAL\",\n            \"categoryName\": \"PAKAIAN PEREMPUAN\",\n            \"priceProduct\": 10,\n            \"qty\": 9,\n            \"amount\": 90\n        },\n        {\n            \"productId\": \"f653c560-f83e-46d9-9f98-77b643977750\",\n            \"date\": \"2022-12-09\",\n            \"vendorName\": \"VENDOR A\",\n            \"productName\": \"SEPATU FUTSAL\",\n            \"categoryName\": \"PAKAIAN PEREMPUAN\",\n            \"priceProduct\": 10,\n            \"qty\": 9,\n            \"amount\": 90\n        },\n        {\n            \"productId\": \"f653c560-f83e-46d9-9f98-77b643977750\",\n            \"date\": \"2022-12-09\",\n            \"vendorName\": \"VENDOR A\",\n            \"productName\": \"SEPATU FUTSAL\",\n            \"categoryName\": \"PAKAIAN PEREMPUAN\",\n            \"priceProduct\": 10,\n            \"qty\": 9,\n            \"amount\": 90\n        },\n        {\n            \"productId\": \"f653c560-f83e-46d9-9f98-77b643977750\",\n            \"date\": \"2022-12-09\",\n            \"vendorName\": \"VENDOR A\",\n            \"productName\": \"SEPATU FUTSAL\",\n            \"categoryName\": \"PAKAIAN PEREMPUAN\",\n            \"priceProduct\": 10,\n            \"qty\": 9,\n            \"amount\": 90\n        },\n        {\n            \"productId\": \"f653c560-f83e-46d9-9f98-77b643977750\",\n            \"date\": \"2022-12-09\",\n            \"vendorName\": \"VENDOR A\",\n            \"productName\": \"SEPATU FUTSAL\",\n            \"categoryName\": \"PAKAIAN PEREMPUAN\",\n            \"priceProduct\": 10,\n            \"qty\": 9,\n            \"amount\": 90\n        },\n        {\n            \"productId\": \"f653c560-f83e-46d9-9f98-77b643977750\",\n            \"date\": \"2022-12-09\",\n            \"vendorName\": \"VENDOR A\",\n            \"productName\": \"SEPATU FUTSAL\",\n            \"categoryName\": \"PAKAIAN PEREMPUAN\",\n            \"priceProduct\": 10,\n            \"qty\": 9,\n            \"amount\": 90\n        },\n        {\n            \"productId\": \"f653c560-f83e-46d9-9f98-77b643977750\",\n            \"date\": \"2022-12-09\",\n            \"vendorName\": \"VENDOR A\",\n            \"productName\": \"SEPATU FUTSAL\",\n            \"categoryName\": \"PAKAIAN PEREMPUAN\",\n            \"priceProduct\": 10,\n            \"qty\": 10,\n            \"amount\": 100\n        }\n    ],\n    \"link\": \"/home/user/Documents/spring/live_code_1_advanced/src/main/java/com/enigma/procurement/assets/reportx.csv\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Get All Report Month",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": [
+						{
+							"name": "Get All Report Month",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/reporting?time=month&csv=report",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"reporting"
+									],
+									"query": [
+										{
+											"key": "time",
+											"value": "month"
+										},
+										{
+											"key": "csv",
+											"value": "report"
+										}
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 09 Dec 2022 16:07:55 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"code\": \"00\",\n    \"status\": \"OK\",\n    \"message\": \"Success get all reporting\",\n    \"data\": [\n        {\n            \"productId\": \"f653c560-f83e-46d9-9f98-77b643977750\",\n            \"date\": \"2022-12-09\",\n            \"vendorName\": \"VENDOR A\",\n            \"productName\": \"SEPATU FUTSAL\",\n            \"categoryName\": \"PAKAIAN PEREMPUAN\",\n            \"priceProduct\": 10,\n            \"qty\": 9,\n            \"amount\": 90\n        },\n        {\n            \"productId\": \"f653c560-f83e-46d9-9f98-77b643977750\",\n            \"date\": \"2022-12-09\",\n            \"vendorName\": \"VENDOR A\",\n            \"productName\": \"SEPATU FUTSAL\",\n            \"categoryName\": \"PAKAIAN PEREMPUAN\",\n            \"priceProduct\": 10,\n            \"qty\": 9,\n            \"amount\": 90\n        },\n        {\n            \"productId\": \"f653c560-f83e-46d9-9f98-77b643977750\",\n            \"date\": \"2022-12-09\",\n            \"vendorName\": \"VENDOR A\",\n            \"productName\": \"SEPATU FUTSAL\",\n            \"categoryName\": \"PAKAIAN PEREMPUAN\",\n            \"priceProduct\": 10,\n            \"qty\": 9,\n            \"amount\": 90\n        },\n        {\n            \"productId\": \"f653c560-f83e-46d9-9f98-77b643977750\",\n            \"date\": \"2022-12-09\",\n            \"vendorName\": \"VENDOR A\",\n            \"productName\": \"SEPATU FUTSAL\",\n            \"categoryName\": \"PAKAIAN PEREMPUAN\",\n            \"priceProduct\": 10,\n            \"qty\": 9,\n            \"amount\": 90\n        },\n        {\n            \"productId\": \"f653c560-f83e-46d9-9f98-77b643977750\",\n            \"date\": \"2022-12-09\",\n            \"vendorName\": \"VENDOR A\",\n            \"productName\": \"SEPATU FUTSAL\",\n            \"categoryName\": \"PAKAIAN PEREMPUAN\",\n            \"priceProduct\": 10,\n            \"qty\": 9,\n            \"amount\": 90\n        },\n        {\n            \"productId\": \"f653c560-f83e-46d9-9f98-77b643977750\",\n            \"date\": \"2022-12-09\",\n            \"vendorName\": \"VENDOR A\",\n            \"productName\": \"SEPATU FUTSAL\",\n            \"categoryName\": \"PAKAIAN PEREMPUAN\",\n            \"priceProduct\": 10,\n            \"qty\": 9,\n            \"amount\": 90\n        },\n        {\n            \"productId\": \"f653c560-f83e-46d9-9f98-77b643977750\",\n            \"date\": \"2022-12-09\",\n            \"vendorName\": \"VENDOR A\",\n            \"productName\": \"SEPATU FUTSAL\",\n            \"categoryName\": \"PAKAIAN PEREMPUAN\",\n            \"priceProduct\": 10,\n            \"qty\": 9,\n            \"amount\": 90\n        },\n        {\n            \"productId\": \"f653c560-f83e-46d9-9f98-77b643977750\",\n            \"date\": \"2022-12-09\",\n            \"vendorName\": \"VENDOR A\",\n            \"productName\": \"SEPATU FUTSAL\",\n            \"categoryName\": \"PAKAIAN PEREMPUAN\",\n            \"priceProduct\": 10,\n            \"qty\": 9,\n            \"amount\": 90\n        },\n        {\n            \"productId\": \"f653c560-f83e-46d9-9f98-77b643977750\",\n            \"date\": \"2022-12-09\",\n            \"vendorName\": \"VENDOR A\",\n            \"productName\": \"SEPATU FUTSAL\",\n            \"categoryName\": \"PAKAIAN PEREMPUAN\",\n            \"priceProduct\": 10,\n            \"qty\": 10,\n            \"amount\": 100\n        },\n        {\n            \"productId\": \"f653c560-f83e-46d9-9f98-77b643977750\",\n            \"date\": \"2022-12-10\",\n            \"vendorName\": \"VENDOR A\",\n            \"productName\": \"SEPATU FUTSAL\",\n            \"categoryName\": \"PAKAIAN PEREMPUAN\",\n            \"priceProduct\": 10,\n            \"qty\": 120,\n            \"amount\": 1200\n        },\n        {\n            \"productId\": \"f653c560-f83e-46d9-9f98-77b643977750\",\n            \"date\": \"2022-12-10\",\n            \"vendorName\": \"VENDOR A\",\n            \"productName\": \"SEPATU FUTSAL\",\n            \"categoryName\": \"PAKAIAN PEREMPUAN\",\n            \"priceProduct\": 10,\n            \"qty\": 30,\n            \"amount\": 300\n        },\n        {\n            \"productId\": \"f653c560-f83e-46d9-9f98-77b643977750\",\n            \"date\": \"2022-12-10\",\n            \"vendorName\": \"VENDOR A\",\n            \"productName\": \"SEPATU FUTSAL\",\n            \"categoryName\": \"PAKAIAN PEREMPUAN\",\n            \"priceProduct\": 10,\n            \"qty\": 30,\n            \"amount\": 300\n        }\n    ],\n    \"link\": \"/home/user/Documents/spring/live_code_1_advanced/src/main/java/com/enigma/procurement/assets/report.csv\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "authentication",
+			"item": [
+				{
+					"name": "Login",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/auth",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"auth"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Login",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"email\":\"pramudyadiva@yahxoo.cozm\",\n    \"password\":\"12345\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/auth",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"auth"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "plain",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain;charset=UTF-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "240"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 09 Dec 2022 16:08:18 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJBZG1pbnthZG1pbklkPSdlOGYxNjhjMy05MjBiLTRhZWQtOWExNi0wMThmMTk0YWEyNGYnLCBlbWFpbD0ncHJhbXVkeWFkaXZhQHlhaHhvby5jb3ptJ30iLCJpYXQiOjE2NzA2MDIwOTgsImV4cCI6MTY3MDYwMjgxOH0.eiqtL--82xBmPrT13b5Eg-4WmcUpJfJzuKvoPutam0w"
+						}
+					]
+				},
+				{
+					"name": "Create Admin",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\":\"pramudyadiva@yahoo.com\",\n    \"password\":\"bebas dong\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/admin",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"admin"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Admin",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/admin",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"admin"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get All Admin",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/admin",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"admin"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 09 Dec 2022 16:08:48 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"code\": \"00\",\n    \"status\": \"OK\",\n    \"message\": \"Success get all Admin\",\n    \"data\": [\n        {\n            \"adminId\": \"34e94760-32c2-4d56-99b8-247e00e03ca2\",\n            \"email\": \"pramudyadiva@yahoo.com\",\n            \"password\": \"bebas dong\"\n        },\n        {\n            \"adminId\": \"977397a7-012f-442c-b0aa-b6f591ecd068\",\n            \"email\": \"pramudyadiva@yahxoo.com\",\n            \"password\": \"bebas dong\"\n        },\n        {\n            \"adminId\": \"e8f168c3-920b-4aed-9a16-018f194aa24f\",\n            \"email\": \"pramudyadiva@yahxoo.cozm\",\n            \"password\": \"827ccb0eea8a706c4c34a16891f84e7b\"\n        }\n    ]\n}"
+						}
+					]
+				}
+			]
+		}
+	]
+}
