@@ -5,19 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1d8ff25e-3bf1-4ab3-a75e-107770d89628" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/enigma/procurement/utils/Md5.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/enigma/procurement/services/ProductServiceImplTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/product.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/transaction.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/vendor.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/enigma/procurement/assets/report.csv" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/enigma/procurement/assets/report.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/enigma/procurement/models/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/enigma/procurement/models/Product.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/enigma/procurement/repositories/TransactionRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/enigma/procurement/repositories/TransactionRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/enigma/procurement/repositories/specifications/ReportingSpec.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/enigma/procurement/repositories/specifications/ReportingSpec.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/enigma/procurement/services/AdminServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/enigma/procurement/services/AdminServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/enigma/procurement/services/AuthServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/enigma/procurement/services/AuthServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/enigma/procurement/services/CategoryServiceImplTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/enigma/procurement/services/ProductServiceImplTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/enigma/procurement/services/ProductServiceImplTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -94,7 +83,7 @@
       <recent name="com.enigma.procurement.exception" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.ProductServiceImplTest.itShould_ReturnProduct_When_ProductServiceCreateProduct">
+  <component name="RunManager" selected="JUnit.ProductServiceImplTest.itShould_ThrowException_When_ProductServiceCreateError">
     <configuration name="App" type="Application" factoryName="Application" nameIsGenerated="true">
       <envs>
         <env name="API_PORT" value="8080" />
@@ -106,6 +95,22 @@
       </envs>
       <option name="MAIN_CLASS_NAME" value="com.enigma.procurement.App" />
       <module name="live_code_1_advanced" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ProductServiceImplTest.itShould_ReturnListProduct_When_ProductServiceGetAllProduct" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="live_code_1_advanced" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.enigma.procurement.services.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.enigma.procurement.services" />
+      <option name="MAIN_CLASS_NAME" value="com.enigma.procurement.services.ProductServiceImplTest" />
+      <option name="METHOD_NAME" value="itShould_ReturnListProduct_When_ProductServiceGetAllProduct" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -126,13 +131,69 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="ProductServiceImplTest.itShould_ThrowException_When_CategoryFindIdError" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="live_code_1_advanced" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.enigma.procurement.services.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.enigma.procurement.services" />
+      <option name="MAIN_CLASS_NAME" value="com.enigma.procurement.services.ProductServiceImplTest" />
+      <option name="METHOD_NAME" value="itShould_ThrowException_When_CategoryFindIdError" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ProductServiceImplTest.itShould_ThrowException_When_ProductServiceCreateError" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="live_code_1_advanced" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.enigma.procurement.services.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.enigma.procurement.services" />
+      <option name="MAIN_CLASS_NAME" value="com.enigma.procurement.services.ProductServiceImplTest" />
+      <option name="METHOD_NAME" value="itShould_ThrowException_When_ProductServiceCreateError" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ProductServiceImplTest.itShould_ThrowException_When_ProductServiceListGetError" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="live_code_1_advanced" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.enigma.procurement.services.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.enigma.procurement.services" />
+      <option name="MAIN_CLASS_NAME" value="com.enigma.procurement.services.ProductServiceImplTest" />
+      <option name="METHOD_NAME" value="itShould_ThrowException_When_ProductServiceListGetError" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <list>
       <item itemvalue="Application.App" />
+      <item itemvalue="JUnit.ProductServiceImplTest.itShould_ReturnListProduct_When_ProductServiceGetAllProduct" />
       <item itemvalue="JUnit.ProductServiceImplTest.itShould_ReturnProduct_When_ProductServiceCreateProduct" />
+      <item itemvalue="JUnit.ProductServiceImplTest.itShould_ThrowException_When_CategoryFindIdError" />
+      <item itemvalue="JUnit.ProductServiceImplTest.itShould_ThrowException_When_ProductServiceCreateError" />
+      <item itemvalue="JUnit.ProductServiceImplTest.itShould_ThrowException_When_ProductServiceListGetError" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.ProductServiceImplTest.itShould_ThrowException_When_ProductServiceCreateError" />
+        <item itemvalue="JUnit.ProductServiceImplTest.itShould_ThrowException_When_CategoryFindIdError" />
+        <item itemvalue="JUnit.ProductServiceImplTest.itShould_ThrowException_When_ProductServiceListGetError" />
         <item itemvalue="JUnit.ProductServiceImplTest.itShould_ReturnProduct_When_ProductServiceCreateProduct" />
+        <item itemvalue="JUnit.ProductServiceImplTest.itShould_ReturnListProduct_When_ProductServiceGetAllProduct" />
       </list>
     </recent_temporary>
   </component>
