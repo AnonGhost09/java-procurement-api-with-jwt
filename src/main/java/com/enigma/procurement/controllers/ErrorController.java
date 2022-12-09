@@ -2,6 +2,7 @@ package com.enigma.procurement.controllers;
 
 import com.enigma.procurement.exception.EntityExistException;
 import com.enigma.procurement.exception.NotFoundException;
+import com.enigma.procurement.exception.UnauthorizedException;
 import com.enigma.procurement.models.responses.ErrorResponse;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -18,6 +19,12 @@ import java.util.Set;
 
 @RestControllerAdvice
 public class ErrorController {
+
+    @ExceptionHandler(UnauthorizedException .class)
+    ResponseEntity<String> handleUnauthorizedException(UnauthorizedException e){
+        return ResponseEntity.status(HttpStatus.UNAUTHORIZED)
+                .body("Unauthorized");
+    }
 
     @ExceptionHandler(EntityExistException.class)
     ResponseEntity<ErrorResponse> handleEntityExistViolationException(EntityExistException exception) {

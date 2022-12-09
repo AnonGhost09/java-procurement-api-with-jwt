@@ -26,7 +26,7 @@ public class Transaction {
 
     @ManyToOne
     @JoinColumn(name = "stock_id")
-    @JsonIgnore
+    @JsonBackReference
     private Stock stock;
 
     public String getTransactionId() {

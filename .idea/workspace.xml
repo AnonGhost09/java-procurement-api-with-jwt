@@ -5,20 +5,34 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1d8ff25e-3bf1-4ab3-a75e-107770d89628" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/enigma/procurement/models/responses/DownloadResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/enigma/procurement/utils/ToCsv.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/enigma/procurement/configuration/InterceptorConfiguration.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/enigma/procurement/constansts/UrlMappings.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/enigma/procurement/controllers/AdminController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/enigma/procurement/controllers/interceptors/MiddlewareInterceptor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/enigma/procurement/exception/UnauthorizedException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/enigma/procurement/models/requests/AdminRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/enigma/procurement/repositories/AdminRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/enigma/procurement/repositories/specifications/AuthSpec.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/enigma/procurement/services/AdminService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/enigma/procurement/services/AdminServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/enigma/procurement/services/AuthService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/enigma/procurement/services/AuthServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/enigma/procurement/utils/JwtUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/enigma/procurement/services/CategoryServiceImplTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/enigma/procurement/controllers/ReportingController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/enigma/procurement/controllers/ReportingController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/enigma/procurement/models/Category.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/enigma/procurement/models/Category.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/enigma/procurement/models/PriceProduct.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/enigma/procurement/models/PriceProduct.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/enigma/procurement/models/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/enigma/procurement/models/Product.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/enigma/procurement/models/Reporting.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/enigma/procurement/models/Reporting.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/enigma/procurement/models/Stock.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/enigma/procurement/models/Stock.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/reporting.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/enigma/procurement/assets/report.csv" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/enigma/procurement/assets/report.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/enigma/procurement/controllers/ErrorController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/enigma/procurement/controllers/ErrorController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/enigma/procurement/controllers/TransactionController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/enigma/procurement/controllers/TransactionController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/enigma/procurement/models/Admin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/enigma/procurement/models/Admin.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/enigma/procurement/models/Transaction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/enigma/procurement/models/Transaction.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/enigma/procurement/models/Vendor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/enigma/procurement/models/Vendor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/enigma/procurement/repositories/specifications/ReportingSpec.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/enigma/procurement/repositories/specifications/ReportingSpec.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/enigma/procurement/services/ReportingService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/enigma/procurement/services/ReportingService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/enigma/procurement/services/PriceProductServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/enigma/procurement/services/PriceProductServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/enigma/procurement/services/ReportingServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/enigma/procurement/services/ReportingServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/enigma/procurement/services/TransactionService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/enigma/procurement/services/TransactionService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/enigma/procurement/services/TransactionServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/enigma/procurement/services/TransactionServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/enigma/procurement/utils/ToCsv.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/enigma/procurement/utils/ToCsv.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,8 +42,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Interface" />
+        <option value="JUnit5 Test Class" />
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -66,6 +81,8 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
     "last_opened_file_path": "/home/user/Documents/spring/live_code_1_advanced/src/main/java/com/enigma/procurement/repositories",
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.0",
@@ -78,8 +95,18 @@
       <recent name="$PROJECT_DIR$/src/main/java/com/enigma/procurement" />
       <recent name="$PROJECT_DIR$/src/main/java/com/enigma/procurement/models" />
     </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="com.enigma.procurement.services" />
+    </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.enigma.procurement.configuration" />
+      <recent name="com.enigma.procurement.repositories" />
+      <recent name="com.enigma.procurement.services" />
       <recent name="com.enigma.procurement.controllers" />
+      <recent name="com.enigma.procurement.exception" />
     </key>
   </component>
   <component name="RunManager">

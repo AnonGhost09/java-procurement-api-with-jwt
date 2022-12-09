@@ -5,7 +5,9 @@ import com.enigma.procurement.models.Category;
 import com.enigma.procurement.models.PriceProduct;
 import com.enigma.procurement.repositories.PriceProductRepository;
 import org.springframework.dao.DataIntegrityViolationException;
+import org.springframework.stereotype.Service;
 
+@Service
 public class PriceProductServiceImpl implements PriceProductService{
 
     private PriceProductRepository priceProductRepository;

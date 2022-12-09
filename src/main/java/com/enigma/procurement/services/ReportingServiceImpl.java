@@ -48,8 +48,6 @@ public class ReportingServiceImpl implements ReportingService {
         List<Transaction> transactions = transactionRepository.findAll(spec);
         List<Reporting> reportings = new ArrayList<>();
 
-
-
         for (Transaction transaction:
                 transactions) {
 

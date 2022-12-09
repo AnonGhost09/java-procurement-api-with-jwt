@@ -1,6 +1,7 @@
 package com.enigma.procurement.utils;
 
 import com.enigma.procurement.models.Reporting;
+import org.springframework.stereotype.Component;
 
 import java.io.File;
 import java.io.FileWriter;

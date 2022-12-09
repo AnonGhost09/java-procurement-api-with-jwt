@@ -7,6 +7,7 @@ import com.enigma.procurement.repositories.StockRepository;
 import com.enigma.procurement.repositories.TransactionRepository;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
 import java.util.Optional;
 
 @Service
@@ -39,5 +40,14 @@ public class TransactionServiceImpl implements TransactionService {
         }catch (Exception e){
             throw new RuntimeException("Data gagal dimasukan");
         }
+    }
+
+    @Override
+    public List<Transaction> getAllTransaction() {
+        List result = transactionRepository.findAll();
+        if (result.isEmpty()) {
+            throw new NotFoundException("Transaction not found");
+        }
+        return result;
     }
 }
