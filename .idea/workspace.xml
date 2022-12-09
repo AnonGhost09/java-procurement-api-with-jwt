@@ -6,7 +6,10 @@
   <component name="ChangeListManager">
     <list default="true" id="1d8ff25e-3bf1-4ab3-a75e-107770d89628" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/enigma/procurement/services/ProductServiceImplTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/enigma/procurement/services/ProductServiceImplTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/enigma/procurement/controllers/AuthController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/enigma/procurement/controllers/AuthController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/enigma/procurement/controllers/interceptors/MiddlewareInterceptor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/enigma/procurement/controllers/interceptors/MiddlewareInterceptor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/enigma/procurement/utils/JwtUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/enigma/procurement/utils/JwtUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -83,7 +86,7 @@
       <recent name="com.enigma.procurement.exception" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.ProductServiceImplTest.itShould_ThrowException_When_ProductServiceCreateError">
+  <component name="RunManager" selected="Application.App">
     <configuration name="App" type="Application" factoryName="Application" nameIsGenerated="true">
       <envs>
         <env name="API_PORT" value="8080" />
@@ -99,7 +102,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ProductServiceImplTest.itShould_ReturnListProduct_When_ProductServiceGetAllProduct" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ProductServiceImplTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="live_code_1_advanced" />
       <extension name="coverage">
         <pattern>
@@ -109,8 +112,7 @@
       </extension>
       <option name="PACKAGE_NAME" value="com.enigma.procurement.services" />
       <option name="MAIN_CLASS_NAME" value="com.enigma.procurement.services.ProductServiceImplTest" />
-      <option name="METHOD_NAME" value="itShould_ReturnListProduct_When_ProductServiceGetAllProduct" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -181,7 +183,7 @@
     </configuration>
     <list>
       <item itemvalue="Application.App" />
-      <item itemvalue="JUnit.ProductServiceImplTest.itShould_ReturnListProduct_When_ProductServiceGetAllProduct" />
+      <item itemvalue="JUnit.ProductServiceImplTest" />
       <item itemvalue="JUnit.ProductServiceImplTest.itShould_ReturnProduct_When_ProductServiceCreateProduct" />
       <item itemvalue="JUnit.ProductServiceImplTest.itShould_ThrowException_When_CategoryFindIdError" />
       <item itemvalue="JUnit.ProductServiceImplTest.itShould_ThrowException_When_ProductServiceCreateError" />
@@ -189,11 +191,11 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.ProductServiceImplTest" />
         <item itemvalue="JUnit.ProductServiceImplTest.itShould_ThrowException_When_ProductServiceCreateError" />
         <item itemvalue="JUnit.ProductServiceImplTest.itShould_ThrowException_When_CategoryFindIdError" />
         <item itemvalue="JUnit.ProductServiceImplTest.itShould_ThrowException_When_ProductServiceListGetError" />
         <item itemvalue="JUnit.ProductServiceImplTest.itShould_ReturnProduct_When_ProductServiceCreateProduct" />
-        <item itemvalue="JUnit.ProductServiceImplTest.itShould_ReturnListProduct_When_ProductServiceGetAllProduct" />
       </list>
     </recent_temporary>
   </component>

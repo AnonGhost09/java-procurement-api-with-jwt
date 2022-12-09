@@ -1,5 +1,6 @@
 package com.enigma.procurement.utils;
 
+import com.enigma.procurement.exception.NotFoundException;
 import com.enigma.procurement.exception.UnauthorizedException;
 import io.jsonwebtoken.*;
 import org.springframework.beans.factory.annotation.Value;
@@ -27,6 +28,9 @@ public class JwtUtil {
 
     public Boolean validateToken(String token){
         try {
+            if(token == null){
+                throw new UnauthorizedException("Token empty");
+            }
             Jwts.parser().setSigningKey(secret).parseClaimsJws(token);
             return true;
         }catch (ExpiredJwtException e){

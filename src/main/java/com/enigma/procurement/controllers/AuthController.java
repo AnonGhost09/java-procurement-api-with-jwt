@@ -24,7 +24,6 @@ public class AuthController {
 
     @PostMapping
     public ResponseEntity authentication(@RequestBody AdminRequest adminRequest){
-        System.out.println("ba");;
         String token = authService.login(adminRequest);
         return ResponseEntity.ok(token);
     }
