@@ -54,13 +54,6 @@ public class Product {
         this.productName = productName;
     }
 
-    public List<Stock> getProductVendors() {
-        return stocks;
-    }
-
-    public void setProductVendors(List<Stock> stocks) {
-        this.stocks = stocks;
-    }
 
     public List<Stock> getStocks() {
         return stocks;

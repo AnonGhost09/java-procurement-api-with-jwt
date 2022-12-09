@@ -7,10 +7,12 @@ import com.enigma.procurement.models.requests.AdminRequest;
 import com.enigma.procurement.repositories.AdminRepository;
 import com.enigma.procurement.repositories.specifications.AuthSpec;
 import com.enigma.procurement.utils.JwtUtil;
+import com.enigma.procurement.utils.Md5;
 import org.springframework.data.jpa.domain.Specification;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.security.NoSuchAlgorithmException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -36,6 +38,7 @@ public class AuthServiceImpl implements AuthService {
                 throw new NotFoundException("Admin not found");
             }
 
+            adminRequest.setPassword(Md5.getMd5(adminRequest.getPassword()));
             if (!admin.getPassword().equals(adminRequest.getPassword())) {
                 throw new UnauthorizedException("Password salah");
             }
@@ -44,6 +47,8 @@ public class AuthServiceImpl implements AuthService {
             return token;
         }catch (UnauthorizedException e){
             throw new UnauthorizedException("Invalid user name or password");
+        } catch (NoSuchAlgorithmException e) {
+            throw new RuntimeException(e);
         }
     }
 }

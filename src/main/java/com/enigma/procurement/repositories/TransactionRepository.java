@@ -11,6 +11,4 @@ import java.util.List;
 public interface TransactionRepository extends JpaRepository<Transaction, String> {
     List<Transaction> findAll(Specification spec);
 
-//    @Query("SELECT t FROM Transaction t WHERE t.date = CURRENT_DATE")
-//    List<Transaction> findByDateToday();
 }

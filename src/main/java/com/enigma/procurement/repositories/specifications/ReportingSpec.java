@@ -14,6 +14,6 @@ public class ReportingSpec {
 
     public Specification<Transaction> getAllDateToday(){
         return (root, query, criteriaBuilder) ->
-                criteriaBuilder.equal(root.get("dateTransaction"), new Date());
+              criteriaBuilder.equal(root.get("dateTransaction"), new Date().getMonth());
     }
 }
