@@ -1,6 +1,5 @@
 package com.enigma.procurement.services;
 
-import com.enigma.procurement.exception.NotFoundException;
 import com.enigma.procurement.models.Category;
 import com.enigma.procurement.models.Product;
 import com.enigma.procurement.repositories.CategoryRepository;
@@ -63,20 +62,8 @@ class ProductServiceImplTest {
 
     @Test
     void itShould_ThrowException_When_CategoryFindIdError() throws Exception{
-        Category dummyCategory = new Category();
-
-        dummyCategory.setCategoryId("1");
-        dummyCategory.setCategoryName("BAJU ANAK ANAK");
-
-        Product dummyProduct = new Product();
-
-        dummyProduct.setProductId("1");
-        dummyProduct.setProductName("product 1");
-
-        dummyProduct.setCategory(dummyCategory);
-
         when(mockCategoryRepository.findById(anyString())).thenThrow(NullPointerException.class);
-        Assertions.assertThrows(RuntimeException.class,() -> productService.create(dummyProduct));
+        Assertions.assertThrows(RuntimeException.class,() -> productService.getAll());
     }
 
     @Test
@@ -90,6 +77,7 @@ class ProductServiceImplTest {
 
         dummyProduct.setProductId("1");
         dummyProduct.setProductName("product 1");
+
 
         dummyProduct.setCategory(dummyCategory);
 

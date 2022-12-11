@@ -85,4 +85,4 @@ public class VendorServiceImpl implements VendorService {
             throw new RuntimeException("Data gagal di update");
         }
     }
-}
+}  

@@ -6,7 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="1d8ff25e-3bf1-4ab3-a75e-107770d89628" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/enigma/procurement/controllers/ReportingController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/enigma/procurement/controllers/ReportingController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/enigma/procurement/services/VendorServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/enigma/procurement/services/VendorServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/enigma/procurement/services/ProductServiceImplTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/enigma/procurement/services/ProductServiceImplTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/enigma/procurement/services/VendorServiceImplTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/enigma/procurement/services/VendorServiceImplTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -85,7 +86,7 @@
       <recent name="com.enigma.procurement.exception" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.App">
+  <component name="RunManager" selected="JUnit.VendorServiceImplTest.itShould_ThrowNotFoundException_When_VendorServiceUpdateError">
     <configuration name="App" type="Application" factoryName="Application" nameIsGenerated="true">
       <envs>
         <env name="API_PORT" value="8080" />
@@ -101,7 +102,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ProductServiceImplTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="VendorServiceImplTest.itShould_ReturnListVendor_When_VendorServiceGetAllVendor" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="live_code_1_advanced" />
       <extension name="coverage">
         <pattern>
@@ -110,29 +111,14 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.enigma.procurement.services" />
-      <option name="MAIN_CLASS_NAME" value="com.enigma.procurement.services.ProductServiceImplTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ProductServiceImplTest.itShould_ReturnProduct_When_ProductServiceCreateProduct" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="live_code_1_advanced" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.enigma.procurement.services.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.enigma.procurement.services" />
-      <option name="MAIN_CLASS_NAME" value="com.enigma.procurement.services.ProductServiceImplTest" />
-      <option name="METHOD_NAME" value="itShould_ReturnProduct_When_ProductServiceCreateProduct" />
+      <option name="MAIN_CLASS_NAME" value="com.enigma.procurement.services.VendorServiceImplTest" />
+      <option name="METHOD_NAME" value="itShould_ReturnListVendor_When_VendorServiceGetAllVendor" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ProductServiceImplTest.itShould_ThrowException_When_CategoryFindIdError" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="VendorServiceImplTest.itShould_ThrowException_When_VendorServceCreateError" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="live_code_1_advanced" />
       <extension name="coverage">
         <pattern>
@@ -141,14 +127,14 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.enigma.procurement.services" />
-      <option name="MAIN_CLASS_NAME" value="com.enigma.procurement.services.ProductServiceImplTest" />
-      <option name="METHOD_NAME" value="itShould_ThrowException_When_CategoryFindIdError" />
+      <option name="MAIN_CLASS_NAME" value="com.enigma.procurement.services.VendorServiceImplTest" />
+      <option name="METHOD_NAME" value="itShould_ThrowException_When_VendorServceCreateError" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ProductServiceImplTest.itShould_ThrowException_When_ProductServiceCreateError" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="VendorServiceImplTest.itShould_ThrowException_When_VendorServiceCreateError" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="live_code_1_advanced" />
       <extension name="coverage">
         <pattern>
@@ -157,14 +143,14 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.enigma.procurement.services" />
-      <option name="MAIN_CLASS_NAME" value="com.enigma.procurement.services.ProductServiceImplTest" />
-      <option name="METHOD_NAME" value="itShould_ThrowException_When_ProductServiceCreateError" />
+      <option name="MAIN_CLASS_NAME" value="com.enigma.procurement.services.VendorServiceImplTest" />
+      <option name="METHOD_NAME" value="itShould_ThrowException_When_VendorServiceCreateError" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ProductServiceImplTest.itShould_ThrowException_When_ProductServiceListGetError" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="VendorServiceImplTest.itShould_ThrowNotFoundException_When_VendorServiceGetAllError" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="live_code_1_advanced" />
       <extension name="coverage">
         <pattern>
@@ -173,8 +159,24 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.enigma.procurement.services" />
-      <option name="MAIN_CLASS_NAME" value="com.enigma.procurement.services.ProductServiceImplTest" />
-      <option name="METHOD_NAME" value="itShould_ThrowException_When_ProductServiceListGetError" />
+      <option name="MAIN_CLASS_NAME" value="com.enigma.procurement.services.VendorServiceImplTest" />
+      <option name="METHOD_NAME" value="itShould_ThrowNotFoundException_When_VendorServiceGetAllError" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="VendorServiceImplTest.itShould_ThrowNotFoundException_When_VendorServiceUpdateError" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="live_code_1_advanced" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.enigma.procurement.services.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.enigma.procurement.services" />
+      <option name="MAIN_CLASS_NAME" value="com.enigma.procurement.services.VendorServiceImplTest" />
+      <option name="METHOD_NAME" value="itShould_ThrowNotFoundException_When_VendorServiceUpdateError" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -182,19 +184,19 @@
     </configuration>
     <list>
       <item itemvalue="Application.App" />
-      <item itemvalue="JUnit.ProductServiceImplTest" />
-      <item itemvalue="JUnit.ProductServiceImplTest.itShould_ReturnProduct_When_ProductServiceCreateProduct" />
-      <item itemvalue="JUnit.ProductServiceImplTest.itShould_ThrowException_When_CategoryFindIdError" />
-      <item itemvalue="JUnit.ProductServiceImplTest.itShould_ThrowException_When_ProductServiceCreateError" />
-      <item itemvalue="JUnit.ProductServiceImplTest.itShould_ThrowException_When_ProductServiceListGetError" />
+      <item itemvalue="JUnit.VendorServiceImplTest.itShould_ReturnListVendor_When_VendorServiceGetAllVendor" />
+      <item itemvalue="JUnit.VendorServiceImplTest.itShould_ThrowException_When_VendorServceCreateError" />
+      <item itemvalue="JUnit.VendorServiceImplTest.itShould_ThrowException_When_VendorServiceCreateError" />
+      <item itemvalue="JUnit.VendorServiceImplTest.itShould_ThrowNotFoundException_When_VendorServiceGetAllError" />
+      <item itemvalue="JUnit.VendorServiceImplTest.itShould_ThrowNotFoundException_When_VendorServiceUpdateError" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.ProductServiceImplTest" />
-        <item itemvalue="JUnit.ProductServiceImplTest.itShould_ThrowException_When_ProductServiceCreateError" />
-        <item itemvalue="JUnit.ProductServiceImplTest.itShould_ThrowException_When_CategoryFindIdError" />
-        <item itemvalue="JUnit.ProductServiceImplTest.itShould_ThrowException_When_ProductServiceListGetError" />
-        <item itemvalue="JUnit.ProductServiceImplTest.itShould_ReturnProduct_When_ProductServiceCreateProduct" />
+        <item itemvalue="JUnit.VendorServiceImplTest.itShould_ThrowNotFoundException_When_VendorServiceUpdateError" />
+        <item itemvalue="JUnit.VendorServiceImplTest.itShould_ThrowNotFoundException_When_VendorServiceGetAllError" />
+        <item itemvalue="JUnit.VendorServiceImplTest.itShould_ReturnListVendor_When_VendorServiceGetAllVendor" />
+        <item itemvalue="JUnit.VendorServiceImplTest.itShould_ThrowException_When_VendorServceCreateError" />
+        <item itemvalue="JUnit.VendorServiceImplTest.itShould_ThrowException_When_VendorServiceCreateError" />
       </list>
     </recent_temporary>
   </component>
